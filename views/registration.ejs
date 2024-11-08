@@ -1,0 +1,113 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/css/registration_style.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <title>Agent Registration</title>
+  </head>
+  <body>
+    <div id="backgroundImg" class="backgroundImg">
+      <nav class="navbar">
+        <ul>
+          <li>
+            <img src="/images/humble (5).png" alt="Logo" class="logo" />
+          </li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#home">Compare Agents</a></li>
+          <li><a href="#home">Online Valuation</a></li>
+          <li><a href="#home">About Us</a></li>
+        </ul>
+      </nav>
+      <form action="/register" method="POST">
+        <div class="registationDiv">
+          <h1>Agent Registration</h1>
+          <h3>Agency:</h3>
+          <h3>Representatives Name:</h3>
+          <div class="inputDiv">
+            <img src="/images/business_icon.png" />
+            <input
+              name="businessName"
+              id="businessName"
+              placeholder="Enter your business name"
+            />
+          </div>
+          <div class="inputDiv">
+            <img src="/images/representative.png" />
+            <input
+              name="representative"
+              id="representative"
+              placeholder="Enter your representative"
+            />
+          </div>
+          <h3>Email:</h3>
+          <h3>Business Address</h3>
+          <div class="inputDiv">
+            <img src="/images/email.png" />
+            <input name="email" id="email" placeholder="Enter your email" />
+          </div>
+          <div class="inputDiv">
+            <img src="/images/business_location.png" />
+            <input
+              name="location"
+              id="location"
+              placeholder="Enter your address"
+            />
+          </div>
+          <h3>Leads Radius:</h3>
+          <div class="sliderDiv">
+            <p id="sliderDivP"><span id="leadsRadius"></span> miles</p>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider"
+              name="sliderRange"
+              id="sliderRange"
+            />
+          </div>
+          <h3 id="startNewRow">Boost visibility:</h3>
+          <div class="selectDiv">
+            <input type="radio" name="boost" value="1" id="boost" />
+            <label for="boost"><h4>Boost Ads</h4></label>
+          </div>
+          <div class="selectDiv">
+            <input type="radio" name="boost" value="0" id="noboost" />
+            <label for="boost"><h4>No boost</h4></label>
+          </div>
+          <button type="submit" class="">Register</button>
+        </div>
+      </form>
+
+      <script>
+        const slider = document.getElementById("sliderRange");
+        const output = document.getElementById("leadsRadius");
+        const sliderPar = document.getElementById("sliderDivP");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function () {
+          output.innerHTML = this.value;
+        };
+
+        slider.addEventListener("input", function () {
+          const value = slider.value;
+          const width = slider.clientWidth;
+          const position = (value / slider.max) * width;
+          sliderPar.style.left = `${position + 50}px`;
+        });
+      </script>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

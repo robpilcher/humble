@@ -1,0 +1,30 @@
+.slider-container {
+  position: relative; /* Position relative for absolute positioning of the div */
+  width: 300px; /* Width of the slider */
+  margin: 50px; /* Margin for positioning */
+}
+
+input[type="range"] {
+  width: 100%; /* Full width for the slider */
+}
+
+.moving-div {
+  position: absolute; /* Absolute positioning */
+  top: -30px; /* Adjust to position above the slider */
+  left: 50%; /* Start in the middle */
+  transform: translateX(-50%); /* Center the div */
+  background-color: lightblue; /* Background color */
+  padding: 5px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.slidecontainer {
+  position: relative;
+  margin: 50px;
+}
+
+#movingDiv2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

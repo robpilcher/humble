@@ -1,0 +1,102 @@
+body {
+  border: solid 5px #ffffff;
+  font-family: "Manrope", sans-serif;
+  color: #ffffff;
+  background-color: #f8f9ff;
+}
+
+.backgroundImg {
+  position: relative;
+  background-image: url("/images/Hero.png");
+  width: 97vw;
+  background-size: cover;
+  height: 760px;
+}
+
+.questionDiv {
+  background-color: #ffffff;
+  color: #242e49;
+  position: absolute;
+  left: 200px;
+  top: 100px;
+  width: 550px;
+  height: 550px;
+  border-radius: 10px;
+  justify-items: center;
+}
+
+.questionDiv h1 {
+  font-size: 28px;
+  font-weight: 700;
+  width: 450px;
+  text-align: center;
+}
+
+.questionDiv h3 {
+  font-size: 12px;
+  font-weight: 300;
+  width: 450px;
+  text-align: center;
+}
+
+.selectDiv {
+  padding-left: 15px;
+  display: flex;
+  gap: 10px;
+  border: solid 2px #e3e3ee;
+  box-shadow: 5px 5px rgb(240, 242, 249);
+  border-radius: 10px;
+  width: 450px;
+  height: 50px;
+  margin: 10px;
+}
+
+.selectDiv h4 {
+  margin-top: 13.5px;
+}
+
+.buttonDiv button {
+  background-color: #41c8c8;
+  background: linear-gradient(to left, #2ec8b9, #489cdd);
+  width: 220px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 10px;
+  margin-top: 20px;
+  border: none;
+}
+
+.propValueRange {
+  margin-top: 150px;
+}
+
+#valueSlider {
+  width: 400px;
+  margin-left: 20px;
+}
+
+#propValuePar {
+  position: absolute;
+  left: 45%;
+  top: 150px;
+  transform: translateX(-50%);
+  background-color: black;
+  color: #ffffff;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  padding-top: 12px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+}
+
+.shortDiv {
+  height: 400px;
+}
+
+.detailsDiv {
+  width: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
